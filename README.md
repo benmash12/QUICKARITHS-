@@ -1,0 +1,2 @@
+# QUICKARITHS-
+Maths solver 
