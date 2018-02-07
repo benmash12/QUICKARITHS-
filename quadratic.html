@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=0.3">
+
+<title></title>
+<style type="text/css">
+body{background-color:lightblue;}
+header{
+width:100%;
+height:auto;
+background-color:black;
+padding:1px;
+box-shadow: 8px 8px 8px green; 
+}
+#head{font-size:30px;color:lightblue;}
+button{font-size:30px;border-radius:25px;border:1px white solid; }
+p{font-size:25px;}
+#ans{width:80%; background-color:white;
+height:auto;padding:3px;}
+#answer{color:green;}
+</style>
+</head>
+<body>
+
+<header><center><p id="head"><b>Quadratic Equation</b></p></center></header><hr>
+<p><u><b>Instruction</b></u></p>
+<ol type="B"><li>click on "calculate" below</li>
+<li>Enter the value of a, b and c such as <br> <img src="qua.jpg" style="height:40px;"><br>
+e.g in 2x<sup>2</sup>+3x+6=0<br>where a=2,b=3,and c=6</li><li>click "ok"</li></ol>
+<center><div style="border:0px black solid;color:indigo;"><b><u>NOTE:</u></b> NaN means 'Not A Number'</div></center>
+<hr>
+<br><center><button type="button" onclick="calc()" ><b> calculate</b> </button>
+<button type="button" onclick="reset()"><b>reset</b></button></center><br><hr>
+<center>
+
+<div id="ans"><p id="answer">
+The values of x are displayed here<br>after the values of a, b c are entered 
+</p></div></center><hr>
+<br><br><br><br><br><br><br>
+<center><button type="button" onclick="exit()" ><a href="calcu.html">Go back</a></button></center>
+
+<script type="text/javascript">
+function calc(){
+var z = prompt("please write the value of 'a' below");
+var a = Number(z);
+var y = prompt("please write the value of 'b' below");
+var b = Number(y);
+var x = prompt("please write the value of 'c' below");
+var c = Number(x);
+var d = b * b; 
+var e = -1 * 4 * a * c; 
+var f = d - e ;
+var g = Math.sqrt(f) ;
+var h = 2 * a ;
+var i = -1 * b ;
+var j = i + g ;
+var k = j / h ;
+var l = i - g; 
+var m = l / h ; 
+document.getElementById("answer").innerHTML =
+"The value of x is:"+"<br>"+
+k+"<br>"+"or"+"<br>"+m ;
+}
+function exit(){
+alert("Thanks for using this feature!");
+}
+function reset(){
+document.getElementById("answer").innerHTML =
+"The values of x are displayed here"+"<br>"+"after the values of a, b c are entered" ;
+}
+</script>
+<center>designed by Gbiang Benedict </center>
+
+</body>
+</html>
